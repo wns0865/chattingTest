@@ -30,16 +30,25 @@ public class ChatRoomController {
         return ResponseEntity.ok(ResultResponse.success(200, FETCH_ROOMS_SUCCESS, chatRooms));
     }
 
-    @PostMapping("/room")
-    public ResponseEntity<ResultResponse<String>> createRoom(@RequestParam String name) {
-        ChatRoom room = chatservice.createChatRoom(name);
+    @PostMapping("/create")
+    public ResponseEntity<ResultResponse<String>> createRoom() {
+        ChatRoom room = chatservice.createChatRoom();
         return ResponseEntity.ok(ResultResponse.success(201, CREATE_ROOM_SUCCESS, room.getRoomId()));
     }
-
+    @GetMapping("/unread")
+    public ResponseEntity<ResultResponse<Integer>> getUnreadCount(@RequestParam String roomId) {
+        ChatRoom room = chatservice.findRoomById(roomId);
+        if (room != null) {
+            return ResponseEntity.ok(ResultResponse.success(200, "읽지 않은 메시지 수를 조회했습니다.", room.getUnreadMessageCount()));
+        }
+        return ResponseEntity.notFound().build();
+    }
     // 채팅에 참여한 유저 리스트 반환
     @GetMapping("/userlist")
     public ResponseEntity<List<String>> userList(@RequestParam String roomId) {
 
         return ResponseEntity.ok(chatservice.getUserList(roomId));
     }
+
+
 }

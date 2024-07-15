@@ -11,9 +11,10 @@ public class Chat {
     public enum MessageType{
         ENTER, TALK, LEAVE;
     }
+    private Long id;
     private MessageType type;
     private String roomId;
     private String sender;
     private String message;
-    private String time;
+    private String sentAt;
 }

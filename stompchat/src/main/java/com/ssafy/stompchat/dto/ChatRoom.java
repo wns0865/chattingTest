@@ -14,8 +14,8 @@ import java.util.UUID;
 public class ChatRoom {
     @Id
     private String roomId;
-    private String roomName;
     private long userCount;
+    private int unreadMessageCount;
 //    private HashMap<String ,String> userList = new HashMap<String,String>();
 
     @ElementCollection
@@ -23,10 +23,11 @@ public class ChatRoom {
     @MapKeyColumn(name = "user_id")
     @Column(name = "user_name")
     private Map<String, String> userList = new HashMap<>();
-    public static ChatRoom create(String roomName){
+    public static ChatRoom create(){
         ChatRoom chatRoom= new ChatRoom();
         chatRoom.roomId= UUID.randomUUID().toString();
-        chatRoom.roomName=roomName;
+        chatRoom.userCount=0;
+        chatRoom.unreadMessageCount=0;
 
         return chatRoom;
     }
