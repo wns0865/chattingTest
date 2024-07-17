@@ -42,10 +42,10 @@ public class ChatController {
         chat.setType(Chat.MessageType.TALK);
 //        chatservice.incrementUnreadCount(roomId);
         chatservice.saveMessage(chat);
-        template.convertAndSend("/sub/chat/room/" + roomId, chat);
-//        chat.setMessage(chat.getMessage());
-//        System.out.println(chat.toString());
-//        template.convertAndSend("/sub/chat/room/" + chat.getRoomId(), chat);
+//        template.convertAndSend("/sub/chat/room/" + roomId, chat);
+        chat.setMessage(chat.getMessage());
+        System.out.println(chat.toString());
+        template.convertAndSend("/sub/chat/room/" + chat.getRoomId(), chat);
     }
 
     @MessageMapping("/leaveUser")
