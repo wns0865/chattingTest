@@ -1,6 +1,6 @@
-package com.ssafy.stompchat.repository;
+package com.ssafy.stompchat.Chatting.repository;
 
-import com.ssafy.stompchat.dto.ChatRoom;
+import com.ssafy.stompchat.Chatting.dto.ChatRoom;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;

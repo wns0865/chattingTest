@@ -1,9 +1,7 @@
-package com.ssafy.stompchat.controller;
+package com.ssafy.stompchat.Chatting.controller;
 
-import com.ssafy.stompchat.dto.Chat;
-import com.ssafy.stompchat.dto.ChatRoom;
-import com.ssafy.stompchat.repository.ChatRepository;
-import com.ssafy.stompchat.service.Chatservice;
+import com.ssafy.stompchat.Chatting.dto.Chat;
+import com.ssafy.stompchat.Chatting.service.Chatservice;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.messaging.handler.annotation.MessageMapping;

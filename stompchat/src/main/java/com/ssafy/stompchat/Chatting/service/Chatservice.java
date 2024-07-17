@@ -1,14 +1,13 @@
-package com.ssafy.stompchat.service;
+package com.ssafy.stompchat.Chatting.service;
 
-import com.ssafy.stompchat.dto.Chat;
-import com.ssafy.stompchat.dto.ChatMessage;
-import com.ssafy.stompchat.dto.ChatRoom;
-import com.ssafy.stompchat.repository.ChatRoomRepository;
-import com.ssafy.stompchat.repository.ChatMessageRepository;
+import com.ssafy.stompchat.Chatting.dto.Chat;
+import com.ssafy.stompchat.Chatting.dto.ChatMessage;
+import com.ssafy.stompchat.Chatting.repository.ChatMessageRepository;
+import com.ssafy.stompchat.Chatting.repository.ChatRoomRepository;
+import com.ssafy.stompchat.Chatting.dto.ChatRoom;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.CSS;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;

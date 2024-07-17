@@ -1,7 +1,7 @@
-package com.ssafy.stompchat.repository;
+package com.ssafy.stompchat.Chatting.repository;
 
-import com.ssafy.stompchat.dto.Chat;
-import com.ssafy.stompchat.dto.ChatMessage;
+import com.ssafy.stompchat.Chatting.dto.Chat;
+import com.ssafy.stompchat.Chatting.dto.ChatMessage;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

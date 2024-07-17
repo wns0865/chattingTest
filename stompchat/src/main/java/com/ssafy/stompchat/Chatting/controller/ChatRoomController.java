@@ -1,16 +1,13 @@
-package com.ssafy.stompchat.controller;
+package com.ssafy.stompchat.Chatting.controller;
 
-import com.ssafy.stompchat.dto.ChatRoom;
-import com.ssafy.stompchat.dto.ResultResponse;
-import com.ssafy.stompchat.repository.ChatRepository;
-import com.ssafy.stompchat.service.Chatservice;
+import com.ssafy.stompchat.Chatting.dto.ChatRoom;
+import com.ssafy.stompchat.Chatting.dto.ResultResponse;
+import com.ssafy.stompchat.Chatting.service.Chatservice;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController

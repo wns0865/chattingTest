@@ -1,4 +1,4 @@
-package com.ssafy.stompchat.dto;
+package com.ssafy.stompchat.Chatting.dto;
 
 import lombok.Getter;
 import lombok.Builder;
